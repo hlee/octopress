@@ -2,10 +2,10 @@
 #      Main Configs       #
 # ----------------------- #
 
-url: http://yoursite.com
-title: My Octopress Blog
-subtitle: A blogging framework for hackers.
-author: Your Name
+url: http://Andrew-Ken.github.com
+title: Ruby on Rails Blog
+subtitle: Information for Rubyists
+author: Ken Lu, Andrew Sheelan
 simple_search: http://google.com/search
 description:
 
@@ -89,8 +89,8 @@ delicious_user:
 delicious_count: 3
 
 # Disqus Comments
-disqus_short_name:
-disqus_show_comment_count: false
+disqus_short_name: guest
+disqus_show_comment_count: true
 
 # Google Analytics
 google_analytics_tracking_id:
