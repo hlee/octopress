@@ -1,12 +1,12 @@
 ---
 layout: post
-title: "learning_regular_expressions"
+title: "Learning regular expressions"
 date: 2012-11-12 15:54
 comments: true
 categories: [regular exp]
 ---
-# Learning Regular expressions require regular practice
-#### Here are a few ways to practice:
-* rails c
-*[Rubular](http://rubular.com/)
+Learning Regular expressions require regular practice. Here are a few ways to practice:
+
+1. rails c
+2. [Rubular](http://rubular.com/)
 
