@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: regular exp | Ruby on Rails Blog]]></title>
+  <link href="http://Andrew-Ken.github.com/blog/categories/regular-exp/atom.xml" rel="self"/>
+  <link href="http://Andrew-Ken.github.com/"/>
+  <updated>2012-11-12T20:49:26-05:00</updated>
+  <id>http://Andrew-Ken.github.com/</id>
+  <author>
+    <name><![CDATA[Ken Lu, Andrew Sheelan]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Learning regular expressions]]></title>
+    <link href="http://Andrew-Ken.github.com/blog/2012/11/12/learning-regular-expressions/"/>
+    <updated>2012-11-12T15:54:00-05:00</updated>
+    <id>http://Andrew-Ken.github.com/blog/2012/11/12/learning-regular-expressions</id>
+    <content type="html"><![CDATA[<p>Learning Regular expressions require regular practice. Here are a few ways to practice:</p>
+
+<ol>
+<li>rails c</li>
+<li><a href="http://rubular.com/">Rubular</a></li>
+</ol>
+
+]]></content>
+  </entry>
+  
+</feed>
