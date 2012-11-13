@@ -20,7 +20,7 @@ In XCode's Preferences > Downloads you can install command line tools.
 
 3) Let Everyone Know Where XCode Is
 
-```bash
+```c
 sudo xcode-select -switch /Applications/Xcode.app/Contents/Developer
 ```
 
