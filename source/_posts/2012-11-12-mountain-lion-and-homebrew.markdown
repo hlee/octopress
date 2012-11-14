@@ -20,7 +20,7 @@ In XCode's Preferences > Downloads you can install command line tools.
 
 3) Let Everyone Know Where XCode Is
 
-```bash
+```c
 sudo xcode-select -switch /Applications/Xcode.app/Contents/Developer
 ```
 
@@ -30,7 +30,7 @@ Visit http://xquartz.macosforge.org/trac/wiki and download and install 2.7.2+.
 
 You will need to fix the symlink it makes:
 
-```bash
+```sh
 ln -s /opt/X11 /usr/X11
 ```
 
