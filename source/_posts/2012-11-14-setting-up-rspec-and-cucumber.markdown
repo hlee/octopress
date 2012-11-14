@@ -3,7 +3,7 @@ layout: post
 title: "Setting up RSpec and Cucumber"
 date: 2012-11-14 09:04
 comments: true
-categories: 
+categories: [rspec, cucumber, rails]
 ---
 
 ##Including RSpec in your code:##

@@ -3,7 +3,7 @@ layout: post
 title: "Configuring Mac Vim for Programming"
 date: 2012-11-13 19:47
 comments: true
-categories: 
+categories: [macvim, dotvim]
 ---
 
 1. Download and install the latest mvim from 

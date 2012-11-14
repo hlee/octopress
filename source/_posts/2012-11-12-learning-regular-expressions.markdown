@@ -3,7 +3,7 @@ layout: post
 title: "Learning regular expressions"
 date: 2012-11-12 15:54
 comments: true
-categories: [regular exp]
+categories: [regular expressions]
 ---
 Learning Regular expressions require regular practice. Here are a few ways to practice:
 
