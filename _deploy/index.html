@@ -9,7 +9,10 @@
   <meta name="author" content="Ken Lu, Andrew Sheelan">
 
   
-  <meta name="description" content="SOURCE Get Mountain Lion and Homebrew to Be Happy: 1) Install XCode 4.4 into /Applications Get it from the App Store. 2) Install Command Line Tools &hellip;">
+  <meta name="description" content="Here are the steps to push a rails project to Heroku 1) Install Heroku
+sh
+gem install heroku 2) Create a heroku login with email and password
+sh &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -64,6 +67,184 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/11/15/setting-up-heroku/">Setting Up Heroku</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-11-15T11:21:00-05:00" pubdate data-updated="true">Nov 15<span>th</span>, 2012</time>
+        
+         | <a href="/blog/2012/11/15/setting-up-heroku/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><strong>Here are the steps to push a rails project to Heroku</strong></p>
+
+<p>1) Install Heroku
+<code>sh
+gem install heroku
+</code></p>
+
+<p>2) Create a heroku login with email and password
+<code>sh
+heroku Create
+</code>
+3) Change the name of the app
+<code>sh
+heroku apps:rename demo-app
+</code>
+<a href="https://devcenter.heroku.com/articles/renaming-apps">devcenter rename link</a></p>
+
+<p>4) Push the file to heroku
+<code>sh
+git push heroku master
+</code>
+<a href="https://devcenter.heroku.com/articles/git">devcenter git link</a></p>
+
+<p>5) Check the database
+<code>sh
+heroku run rake db:version
+</code>
+<a href="https://devcenter.heroku.com/articles/rake">devcenter rake link</a></p>
+
+<p>7) Perform a db migrate
+<code>sh
+heroku run rake --trace db:migrate
+</code></p>
+
+<p>8) Console:
+<code>sh
+heroku run console
+</code></p>
+
+<h2>Further reading:</h2>
+
+<p><a href="https://devcenter.heroku.com">devcenter link</a></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/11/15/rvm-setup-and-environments/">RVM Setup and Environments</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-11-15T09:23:00-05:00" pubdate data-updated="true">Nov 15<span>th</span>, 2012</time>
+        
+         | <a href="/blog/2012/11/15/rvm-setup-and-environments/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>RVM is the Ruby environment manager. Here are some of the commonly used
+commands.</p>
+
+<p><strong>Installing rvm in unix/mac</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>curl -L https://get.rvm.io | bash -s stable
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Setting up the bash profile for enabling rvm</strong></p>
+
+<p>File: ~/.bash_profile</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="o">[[</span> -s <span class="s2">&quot;$HOME/.rvm/scripts/rvm&quot;</span> <span class="o">]]</span> <span class="o">&amp;&amp;</span> . <span class="s2">&quot;$HOME/.rvm/scripts/rvm&quot;</span>  <span class="c"># This loads RVM</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Dont forget to source it, to load the ~/.bash_profile if you&#8217;re using the same console</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nb">source</span> .bash_profile
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Installing new Ruby version</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>rvm install 1.9.3-p327
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Listing installed ruby versions</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>rvm list
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Updating rvm version from head</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>rvm get head
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Setting the default ruby version</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>rvm <span class="nb">alias </span>create default 1.9.3
+</span><span class='line'>rvm use 1.8.7-p302 --default
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>For more help use:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>rvm --help
+</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -414,6 +595,14 @@ You might need to install libxml2 and link it manually to make sure you don&#821
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2012/11/15/setting-up-heroku/">Setting up Heroku</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/11/15/rvm-setup-and-environments/">RVM Setup and Environments</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2012/11/12/mountain-lion-and-homebrew/">Mountain Lion and Homebrew</a>
       </li>
     
@@ -423,14 +612,6 @@ You might need to install libxml2 and link it manually to make sure you don&#821
     
       <li class="post">
         <a href="/blog/2012/11/12/learning-regular-expressions/">Learning regular expressions</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/11/12/how-to-use-observer-and-call-back/">how to use observer and call back</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/11/09/how-to-proxy-a-domain-as-local/">How to proxy a domain to localhost</a>
       </li>
     
   </ul>
