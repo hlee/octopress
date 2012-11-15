@@ -1,0 +1,30 @@
+---
+layout: post
+title: "Git alias"
+date: 2012-11-13 09:32
+comments: true
+categories: [git, alias]
+---
+
+Following are some of the common git aliases, people use. Add them to ~/.bash_profile
+
+```
+alias g='git'
+alias gst='git status'
+alias gs='git push'
+alias gc='git commit'
+alias gca='git commit -a'
+alias ga='git add'
+alias gco='git checkout'
+alias gb='git branch'
+alias gm='git merge'
+alias gd="git diff"
+```
+
+
+An additional syntax highlighting can be provided as well with the following:
+
+```
+export CLICOLOR=1
+export LSCOLORS=gxfxaxdxcxegedabagacad
+```
