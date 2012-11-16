@@ -4,7 +4,7 @@
   <title><![CDATA[Ruby on Rails Blog]]></title>
   <link href="http://Andrew-Ken.github.com/atom.xml" rel="self"/>
   <link href="http://Andrew-Ken.github.com/"/>
-  <updated>2012-11-15T23:00:06-05:00</updated>
+  <updated>2012-11-15T23:04:01-05:00</updated>
   <id>http://Andrew-Ken.github.com/</id>
   <author>
     <name><![CDATA[Ken Lu, Andrew Sheelan]]></name>
@@ -18,7 +18,7 @@
     <link href="http://Andrew-Ken.github.com/blog/2012/11/15/debugging-using-pry/"/>
     <updated>2012-11-15T22:37:00-05:00</updated>
     <id>http://Andrew-Ken.github.com/blog/2012/11/15/debugging-using-pry</id>
-    <content type="html"><![CDATA[<p><strong>Add the following gems to the Gemfile</strong></p>
+    <content type="html"><![CDATA[<p><strong>Add the following gems to the Gemfile and bundle install</strong></p>
 
 <p>File: Gemfile</p>
 
@@ -31,14 +31,15 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p><strong>The pry-nav gem allows us to use the following commands for Debugging</strong></p>
+<p><strong>The pry-nav gem allows us to use the following command for adding breakpoints
+into our application</strong></p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="nb">binding</span><span class="o">.</span><span class="n">pry</span>
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p><strong>Add the following shortcuts to ~/.pryrc</strong></p>
+<p><strong>Add the following shortcuts to ~/.pryrc to enable navigation while running debugging</strong></p>
 
 <p>File: ~/.pryrc</p>
 

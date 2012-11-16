@@ -4,7 +4,7 @@
   <title><![CDATA[Category: pry | Ruby on Rails Blog]]></title>
   <link href="http://Andrew-Ken.github.com/blog/categories/pry/atom.xml" rel="self"/>
   <link href="http://Andrew-Ken.github.com/"/>
-  <updated>2012-11-15T23:00:06-05:00</updated>
+  <updated>2012-11-15T23:04:01-05:00</updated>
   <id>http://Andrew-Ken.github.com/</id>
   <author>
     <name><![CDATA[Ken Lu, Andrew Sheelan]]></name>
@@ -18,7 +18,7 @@
     <link href="http://Andrew-Ken.github.com/blog/2012/11/15/debugging-using-pry/"/>
     <updated>2012-11-15T22:37:00-05:00</updated>
     <id>http://Andrew-Ken.github.com/blog/2012/11/15/debugging-using-pry</id>
-    <content type="html"><![CDATA[<p><strong>Add the following gems to the Gemfile</strong></p>
+    <content type="html"><![CDATA[<p><strong>Add the following gems to the Gemfile and bundle install</strong></p>
 
 <p>File: Gemfile</p>
 
@@ -28,13 +28,14 @@ gem 'pry-nav'
 gem 'pry-remote'
 </code></p>
 
-<p><strong>The pry-nav gem allows us to use the following commands for Debugging</strong></p>
+<p><strong>The pry-nav gem allows us to use the following command for adding breakpoints
+into our application</strong></p>
 
 <p><code>ruby
 binding.pry
 </code></p>
 
-<p><strong>Add the following shortcuts to ~/.pryrc</strong></p>
+<p><strong>Add the following shortcuts to ~/.pryrc to enable navigation while running debugging</strong></p>
 
 <p>File: ~/.pryrc</p>
 
