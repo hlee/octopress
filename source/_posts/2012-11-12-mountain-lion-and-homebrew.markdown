@@ -3,7 +3,7 @@ layout: post
 title: "Mountain Lion and Homebrew"
 date: 2012-11-12 20:42
 comments: true
-categories: [ gcc , homebrew , ruby gems]
+categories: [mac, gcc , homebrew , ruby gems]
 author: https://gist.github.com/1860902
 ---
 [SOURCE](https://gist.github.com/1860902)
