@@ -2,9 +2,9 @@
 #      Main Configs       #
 # ----------------------- #
 
-url: http://Andrew-Ken.github.com
-title: Ruby on Rails Blog
-subtitle: Information for Rubyists
+url: http://www.yankist.com
+title: Yankist
+subtitle: Its a Free world!
 author: Ken Lu, Andrew Sheelan
 simple_search: http://google.com/search
 description:
@@ -19,7 +19,7 @@ date_format: "ordinal"
 subscribe_rss: /atom.xml
 subscribe_email:
 # RSS feeds can list your email address if you like
-email:
+email: contact_us@yankist.com
 
 # ----------------------- #
 #    Jekyll & Plugins     #
