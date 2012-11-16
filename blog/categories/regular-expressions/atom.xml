@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: regular exp | Ruby on Rails Blog]]></title>
-  <link href="http://Andrew-Ken.github.com/blog/categories/regular-exp/atom.xml" rel="self"/>
+  <title><![CDATA[Category: regular expressions | Ruby on Rails Blog]]></title>
+  <link href="http://Andrew-Ken.github.com/blog/categories/regular-expressions/atom.xml" rel="self"/>
   <link href="http://Andrew-Ken.github.com/"/>
-  <updated>2012-11-13T22:29:32-05:00</updated>
+  <updated>2012-11-15T23:00:06-05:00</updated>
   <id>http://Andrew-Ken.github.com/</id>
   <author>
     <name><![CDATA[Ken Lu, Andrew Sheelan]]></name>

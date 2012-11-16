@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: ruby | Ruby on Rails Blog]]></title>
+  <link href="http://Andrew-Ken.github.com/blog/categories/ruby/atom.xml" rel="self"/>
+  <link href="http://Andrew-Ken.github.com/"/>
+  <updated>2012-11-15T23:00:06-05:00</updated>
+  <id>http://Andrew-Ken.github.com/</id>
+  <author>
+    <name><![CDATA[Ken Lu, Andrew Sheelan]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[RVM Setup and Environments]]></title>
+    <link href="http://Andrew-Ken.github.com/blog/2012/11/15/rvm-setup-and-environments/"/>
+    <updated>2012-11-15T09:23:00-05:00</updated>
+    <id>http://Andrew-Ken.github.com/blog/2012/11/15/rvm-setup-and-environments</id>
+    <content type="html"><![CDATA[<p>RVM is the Ruby environment manager. Here are some of the commonly used
+commands.</p>
+
+<p><strong>Installing rvm in unix/mac</strong></p>
+
+<p><code>sh
+curl -L https://get.rvm.io | bash -s stable
+</code></p>
+
+<p><strong>Setting up the bash profile for enabling rvm</strong></p>
+
+<p>File: .bash_profile
+<code>sh
+[[ -s "$HOME/.rvm/scripts/rvm" ]] &amp;&amp; . "$HOME/.rvm/scripts/rvm"  # This loads RVM
+</code></p>
+
+<p>Dont forget to source it, to load the ~/.bash_profile if you're using the same console
+<code>sh
+source .bash_profile
+</code></p>
+
+<p><strong>Installing new Ruby version</strong>
+<code>sh
+rvm install 1.9.3-p327
+</code></p>
+
+<p><strong>Listing installed ruby versions</strong>
+<code>sh
+rvm list
+</code></p>
+
+<p><strong>Updating rvm version from head</strong>
+<code>sh
+rvm get head
+</code></p>
+
+<p><strong>Setting the default ruby version</strong>
+<code>sh
+rvm alias create default 1.9.3
+rvm use 1.8.7-p302 --default
+</code></p>
+
+<p><strong>For more help use:</strong></p>
+
+<p><code>sh
+rvm --help
+</code></p>
+]]></content>
+  </entry>
+  
+</feed>
