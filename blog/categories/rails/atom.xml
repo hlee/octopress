@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: rails | Ruby on Rails Blog]]></title>
+  <link href="http://Andrew-Ken.github.com/blog/categories/rails/atom.xml" rel="self"/>
+  <link href="http://Andrew-Ken.github.com/"/>
+  <updated>2012-11-15T23:04:01-05:00</updated>
+  <id>http://Andrew-Ken.github.com/</id>
+  <author>
+    <name><![CDATA[Ken Lu, Andrew Sheelan]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Debugging using pry]]></title>
+    <link href="http://Andrew-Ken.github.com/blog/2012/11/15/debugging-using-pry/"/>
+    <updated>2012-11-15T22:37:00-05:00</updated>
+    <id>http://Andrew-Ken.github.com/blog/2012/11/15/debugging-using-pry</id>
+    <content type="html"><![CDATA[<p><strong>Add the following gems to the Gemfile and bundle install</strong></p>
+
+<p>File: Gemfile</p>
+
+<p><code>ruby
+gem 'pry'
+gem 'pry-nav'
+gem 'pry-remote'
+</code></p>
+
+<p><strong>The pry-nav gem allows us to use the following command for adding breakpoints
+into our application</strong></p>
+
+<p><code>ruby
+binding.pry
+</code></p>
+
+<p><strong>Add the following shortcuts to ~/.pryrc to enable navigation while running debugging</strong></p>
+
+<p>File: ~/.pryrc</p>
+
+<p><code>ruby
+Pry.commands.alias_command 'c', 'continue'
+Pry.commands.alias_command 's', 'step'
+Pry.commands.alias_command 'n', 'next'
+</code></p>
+
+<p><strong>The pry-remote let us use pry remotely</strong></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Setting up Heroku]]></title>
+    <link href="http://Andrew-Ken.github.com/blog/2012/11/15/setting-up-heroku/"/>
+    <updated>2012-11-15T11:01:00-05:00</updated>
+    <id>http://Andrew-Ken.github.com/blog/2012/11/15/setting-up-heroku</id>
+    <content type="html"><![CDATA[<h2>Here are the steps to push a rails project to Heroku</h2>
+
+<ol>
+<li>Install Heroku</li>
+</ol>
+
+
+<p><code>sh
+gem install heroku
+</code></p>
+
+<p><strong>2. Create a heroku login with email and password</strong></p>
+
+<p><code>sh
+heroku Create
+</code></p>
+
+<p>3) Change the name of the app</p>
+
+<p><code>sh
+heroku apps:rename demo-app
+</code></p>
+
+<p><a href="https://devcenter.heroku.com/articles/renaming-apps">devcenter rename link</a></p>
+
+<p>4) Push the file to heroku</p>
+
+<p><code>sh
+git push heroku master
+</code></p>
+
+<p><a href="https://devcenter.heroku.com/articles/git">devcenter git link</a></p>
+
+<p>5) Check the database</p>
+
+<p><code>sh
+heroku run rake db:version
+</code></p>
+
+<p><a href="https://devcenter.heroku.com/articles/rake">devcenter rake link</a></p>
+
+<p>7) Perform a db migrate</p>
+
+<p><code>sh
+heroku run rake --trace db:migrate
+</code></p>
+
+<p>8) Console:</p>
+
+<p><code>sh
+heroku run console
+</code></p>
+
+<h2>Further reading:</h2>
+
+<p><a href="https://devcenter.heroku.com">devcenter link</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[RVM Setup and Environments]]></title>
+    <link href="http://Andrew-Ken.github.com/blog/2012/11/15/rvm-setup-and-environments/"/>
+    <updated>2012-11-15T09:23:00-05:00</updated>
+    <id>http://Andrew-Ken.github.com/blog/2012/11/15/rvm-setup-and-environments</id>
+    <content type="html"><![CDATA[<p>RVM is the Ruby environment manager. Here are some of the commonly used
+commands.</p>
+
+<p><strong>Installing rvm in unix/mac</strong></p>
+
+<p><code>sh
+curl -L https://get.rvm.io | bash -s stable
+</code></p>
+
+<p><strong>Setting up the bash profile for enabling rvm</strong></p>
+
+<p>File: .bash_profile
+<code>sh
+[[ -s "$HOME/.rvm/scripts/rvm" ]] &amp;&amp; . "$HOME/.rvm/scripts/rvm"  # This loads RVM
+</code></p>
+
+<p>Dont forget to source it, to load the ~/.bash_profile if you're using the same console
+<code>sh
+source .bash_profile
+</code></p>
+
+<p><strong>Installing new Ruby version</strong>
+<code>sh
+rvm install 1.9.3-p327
+</code></p>
+
+<p><strong>Listing installed ruby versions</strong>
+<code>sh
+rvm list
+</code></p>
+
+<p><strong>Updating rvm version from head</strong>
+<code>sh
+rvm get head
+</code></p>
+
+<p><strong>Setting the default ruby version</strong>
+<code>sh
+rvm alias create default 1.9.3
+rvm use 1.8.7-p302 --default
+</code></p>
+
+<p><strong>For more help use:</strong></p>
+
+<p><code>sh
+rvm --help
+</code></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Using Deligate in ActiveRecord to avoid dots]]></title>
+    <link href="http://Andrew-Ken.github.com/blog/2012/11/14/using-deligate-in-activerecord-to-avoid-dots/"/>
+    <updated>2012-11-14T09:55:00-05:00</updated>
+    <id>http://Andrew-Ken.github.com/blog/2012/11/14/using-deligate-in-activerecord-to-avoid-dots</id>
+    <content type="html"><![CDATA[<h2>Adding deligate method in the model</h2>
+
+<p>There are various situations where we might be using methods from the child
+model from its parents model.</p>
+
+<p>Common example is user and posts</p>
+
+<p>```ruby
+class Post
+  belongs_to :user
+end</p>
+
+<p>class User
+  has_many :posts
+end
+```</p>
+
+<p>To make a call to find a post with category 'ruby' for a User</p>
+
+<p><code>ruby
+User.first.posts.find_by_category('ruby')
+</code></p>
+
+<p>If this is being used in multiple places, adding a deligate will make our life easy, thereby avoiding mulitple dots.
+Also User model doesnt have to know the inner methods of the posts model and a logic change in the model Post would not require multiple changes</p>
+
+<p><code>ruby
+class Post
+  belongs_to :user
+  delegate :find_by_category, :to =&gt; :user, :allow_nil =&gt; true
+end
+</code></p>
+
+<p>now the following code will work.
+<code>ruby
+User.first.find_by_category('ruby')
+</code></p>
+
+<p>There is an option to allow prefix as well</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Setting up RSpec and Cucumber]]></title>
+    <link href="http://Andrew-Ken.github.com/blog/2012/11/14/setting-up-rspec-and-cucumber/"/>
+    <updated>2012-11-14T09:04:00-05:00</updated>
+    <id>http://Andrew-Ken.github.com/blog/2012/11/14/setting-up-rspec-and-cucumber</id>
+    <content type="html"><![CDATA[<h2>Including RSpec in your code:</h2>
+
+<p><strong>Add the following in your Gemfile</strong>
+File: Gemfile
+<code>ruby
+group :test, :development do
+  gem "rspec-rails", "~&gt; 2.0"
+end
+</code></p>
+
+<p><code>sh
+bundle
+</code></p>
+
+<p><strong>Installing RSpec</strong>
+<code>sh
+rails g rspec:install
+</code></p>
+
+<p><strong>Configuring RSpec</strong></p>
+
+<p>File: config/application.rb</p>
+
+<p><code>ruby
+config.generators do |g|
+  g.test_framework :rspec
+  g.integration_tool :rspec
+end
+</code></p>
+
+<p>Now adding a new scaffold or resource will automatically include the RSpecs to help
+test the code</p>
+
+<p><code>sh
+rails g scaffold book title author
+rake db:migrate
+RAILS_ENV=test rake db:migrate
+</code></p>
+
+<p><strong>Running the Specs</strong></p>
+
+<p><code>sh
+rspec spec
+</code></p>
+
+<p>You can also specify the file name and the line number for running individual
+specs</p>
+
+<h2>Including Cucumber in your Code</h2>
+
+<p><strong>Add the following in your Gemfile</strong>
+File: Gemfile</p>
+
+<p><code>ruby
+group :test, :development do
+  gem 'cucumber-rails', require: false
+end
+</code></p>
+
+<p><strong>Installing Cucumber</strong></p>
+
+<p><code>sh
+rails g cucumber:install
+</code></p>
+
+<p><strong>For learners who are looking to setup the cucumber for the first time</strong></p>
+
+<p>Use <a href="https://github.com/cucumber/cucumber-rails-training-wheels">Traing Wheels</a></p>
+
+<p>File: Gemfile
+<code>ruby
+gem "cucumber-rails-training-wheels", :group =&gt; :test
+</code>
+<strong>Installing Cucumber</strong>
+rails generate cucumber_rails_training_wheels:install</p>
+
+<p><strong>Set up Cucumber Training Wheels before Scaffolding</strong></p>
+
+<p><code>sh
+rails generate cucumber_rails_training_wheels:feature post title:string body:text number:integer published:boolean
+rails generate scaffold post title:string body:text number:integer published:boolean
+</code></p>
+
+<p><strong>Testing the Features</strong></p>
+
+<p><code>sh
+cucumber features
+</code></p>
+
+<p><strong>If you face Issues with Tableish in your features</strong></p>
+
+<p>Replace:
+<code>ruby
+tableish('table tr', 'td,th')
+</code>
+With:
+<code>ruby
+find('table').all('tr').map { |row| row.all('th, td').map { |cell| cell.text.strip } }
+</code></p>
+]]></content>
+  </entry>
+  
+</feed>

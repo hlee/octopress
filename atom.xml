@@ -1,0 +1,683 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Ruby on Rails Blog]]></title>
+  <link href="http://Andrew-Ken.github.com/atom.xml" rel="self"/>
+  <link href="http://Andrew-Ken.github.com/"/>
+  <updated>2012-11-15T23:04:01-05:00</updated>
+  <id>http://Andrew-Ken.github.com/</id>
+  <author>
+    <name><![CDATA[Ken Lu, Andrew Sheelan]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Debugging using pry]]></title>
+    <link href="http://Andrew-Ken.github.com/blog/2012/11/15/debugging-using-pry/"/>
+    <updated>2012-11-15T22:37:00-05:00</updated>
+    <id>http://Andrew-Ken.github.com/blog/2012/11/15/debugging-using-pry</id>
+    <content type="html"><![CDATA[<p><strong>Add the following gems to the Gemfile and bundle install</strong></p>
+
+<p>File: Gemfile</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">gem</span> <span class="s1">&#39;pry&#39;</span>
+</span><span class='line'><span class="n">gem</span> <span class="s1">&#39;pry-nav&#39;</span>
+</span><span class='line'><span class="n">gem</span> <span class="s1">&#39;pry-remote&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>The pry-nav gem allows us to use the following command for adding breakpoints
+into our application</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="nb">binding</span><span class="o">.</span><span class="n">pry</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Add the following shortcuts to ~/.pryrc to enable navigation while running debugging</strong></p>
+
+<p>File: ~/.pryrc</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="no">Pry</span><span class="o">.</span><span class="n">commands</span><span class="o">.</span><span class="n">alias_command</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;continue&#39;</span>
+</span><span class='line'><span class="no">Pry</span><span class="o">.</span><span class="n">commands</span><span class="o">.</span><span class="n">alias_command</span> <span class="s1">&#39;s&#39;</span><span class="p">,</span> <span class="s1">&#39;step&#39;</span>
+</span><span class='line'><span class="no">Pry</span><span class="o">.</span><span class="n">commands</span><span class="o">.</span><span class="n">alias_command</span> <span class="s1">&#39;n&#39;</span><span class="p">,</span> <span class="s1">&#39;next&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>The pry-remote let us use pry remotely</strong></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Change Computer/Host Name Mac OsX]]></title>
+    <link href="http://Andrew-Ken.github.com/blog/2012/11/15/change-computer-slash-host-name-mac-osx/"/>
+    <updated>2012-11-15T22:27:00-05:00</updated>
+    <id>http://Andrew-Ken.github.com/blog/2012/11/15/change-computer-slash-host-name-mac-osx</id>
+    <content type="html"><![CDATA[<p>One of the most common problems that we come across is when the programmer tries to
+setup the Mac OS X - name/hostname for the computer, since it takes up most space
+in the Terminal bash prompt and since the default ones are not so fancy, when
+accessed over the network.</p>
+
+<ol>
+<li><p>Click the &#8220;Apple&#8221; menu in the top-left of the screen. Click on &#8220;System Preferences.&#8221;</p></li>
+<li><p>Click the &#8220;Sharing&#8221; icon. At the top of the resulting screen, you will see your current computer name. To change it, click into the field, delete the existing name and enter your desired computer name.</p></li>
+<li><p>Click on the &#8220;Edit&#8221; button underneath the computer name field to change the local hostname. The hostname can be used to access your computer over the network as an alternative to using a numeric IP address and is particularly relevant if you are using a network with a mix of Apple Macs and Microsoft Windows PCs.</p></li>
+<li><p>Close the window to save your changes.</p></li>
+</ol>
+
+
+<p><a href="http://techtips.salon.com/change-apple-mac-computer-name-537.html">Source Link</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Setting up Heroku]]></title>
+    <link href="http://Andrew-Ken.github.com/blog/2012/11/15/setting-up-heroku/"/>
+    <updated>2012-11-15T11:01:00-05:00</updated>
+    <id>http://Andrew-Ken.github.com/blog/2012/11/15/setting-up-heroku</id>
+    <content type="html"><![CDATA[<h2>Here are the steps to push a rails project to Heroku</h2>
+
+<ol>
+<li>Install Heroku</li>
+</ol>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>gem install heroku
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>2. Create a heroku login with email and password</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>heroku Create
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>3) Change the name of the app</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>heroku apps:rename demo-app
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><a href="https://devcenter.heroku.com/articles/renaming-apps">devcenter rename link</a></p>
+
+<p>4) Push the file to heroku</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>git push heroku master
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><a href="https://devcenter.heroku.com/articles/git">devcenter git link</a></p>
+
+<p>5) Check the database</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>heroku run rake db:version
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><a href="https://devcenter.heroku.com/articles/rake">devcenter rake link</a></p>
+
+<p>7) Perform a db migrate</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>heroku run rake --trace db:migrate
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>8) Console:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>heroku run console
+</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Further reading:</h2>
+
+<p><a href="https://devcenter.heroku.com">devcenter link</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[RVM Setup and Environments]]></title>
+    <link href="http://Andrew-Ken.github.com/blog/2012/11/15/rvm-setup-and-environments/"/>
+    <updated>2012-11-15T09:23:00-05:00</updated>
+    <id>http://Andrew-Ken.github.com/blog/2012/11/15/rvm-setup-and-environments</id>
+    <content type="html"><![CDATA[<p>RVM is the Ruby environment manager. Here are some of the commonly used
+commands.</p>
+
+<p><strong>Installing rvm in unix/mac</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>curl -L https://get.rvm.io | bash -s stable
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Setting up the bash profile for enabling rvm</strong></p>
+
+<p>File: .bash_profile</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="o">[[</span> -s <span class="s2">&quot;$HOME/.rvm/scripts/rvm&quot;</span> <span class="o">]]</span> <span class="o">&amp;&amp;</span> . <span class="s2">&quot;$HOME/.rvm/scripts/rvm&quot;</span>  <span class="c"># This loads RVM</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Dont forget to source it, to load the ~/.bash_profile if you&#8217;re using the same console</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nb">source</span> .bash_profile
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Installing new Ruby version</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>rvm install 1.9.3-p327
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Listing installed ruby versions</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>rvm list
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Updating rvm version from head</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>rvm get head
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Setting the default ruby version</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>rvm <span class="nb">alias </span>create default 1.9.3
+</span><span class='line'>rvm use 1.8.7-p302 --default
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>For more help use:</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>rvm --help
+</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Using Deligate in ActiveRecord to avoid dots]]></title>
+    <link href="http://Andrew-Ken.github.com/blog/2012/11/14/using-deligate-in-activerecord-to-avoid-dots/"/>
+    <updated>2012-11-14T09:55:00-05:00</updated>
+    <id>http://Andrew-Ken.github.com/blog/2012/11/14/using-deligate-in-activerecord-to-avoid-dots</id>
+    <content type="html"><![CDATA[<h2>Adding deligate method in the model</h2>
+
+<p>There are various situations where we might be using methods from the child
+model from its parents model.</p>
+
+<p>Common example is user and posts</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">Post</span>
+</span><span class='line'>  <span class="n">belongs_to</span> <span class="ss">:user</span>
+</span><span class='line'><span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">class</span> <span class="nc">User</span>
+</span><span class='line'>  <span class="n">has_many</span> <span class="ss">:posts</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>To make a call to find a post with category &#8216;ruby&#8217; for a User</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="no">User</span><span class="o">.</span><span class="n">first</span><span class="o">.</span><span class="n">posts</span><span class="o">.</span><span class="n">find_by_category</span><span class="p">(</span><span class="s1">&#39;ruby&#39;</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>If this is being used in multiple places, adding a deligate will make our life easy, thereby avoiding mulitple dots.
+Also User model doesnt have to know the inner methods of the posts model and a logic change in the model Post would not require multiple changes</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">Post</span>
+</span><span class='line'>  <span class="n">belongs_to</span> <span class="ss">:user</span>
+</span><span class='line'>  <span class="n">delegate</span> <span class="ss">:find_by_category</span><span class="p">,</span> <span class="ss">:to</span> <span class="o">=&gt;</span> <span class="ss">:user</span><span class="p">,</span> <span class="ss">:allow_nil</span> <span class="o">=&gt;</span> <span class="kp">true</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>now the following code will work.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="no">User</span><span class="o">.</span><span class="n">first</span><span class="o">.</span><span class="n">find_by_category</span><span class="p">(</span><span class="s1">&#39;ruby&#39;</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>There is an option to allow prefix as well</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Setting up RSpec and Cucumber]]></title>
+    <link href="http://Andrew-Ken.github.com/blog/2012/11/14/setting-up-rspec-and-cucumber/"/>
+    <updated>2012-11-14T09:04:00-05:00</updated>
+    <id>http://Andrew-Ken.github.com/blog/2012/11/14/setting-up-rspec-and-cucumber</id>
+    <content type="html"><![CDATA[<h2>Including RSpec in your code:</h2>
+
+<p><strong>Add the following in your Gemfile</strong>
+File: Gemfile</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">group</span> <span class="ss">:test</span><span class="p">,</span> <span class="ss">:development</span> <span class="k">do</span>
+</span><span class='line'>  <span class="n">gem</span> <span class="s2">&quot;rspec-rails&quot;</span><span class="p">,</span> <span class="s2">&quot;~&gt; 2.0&quot;</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>bundle
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Installing RSpec</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>rails g rspec:install
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Configuring RSpec</strong></p>
+
+<p>File: config/application.rb</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">config</span><span class="o">.</span><span class="n">generators</span> <span class="k">do</span> <span class="o">|</span><span class="n">g</span><span class="o">|</span>
+</span><span class='line'>  <span class="n">g</span><span class="o">.</span><span class="n">test_framework</span> <span class="ss">:rspec</span>
+</span><span class='line'>  <span class="n">g</span><span class="o">.</span><span class="n">integration_tool</span> <span class="ss">:rspec</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Now adding a new scaffold or resource will automatically include the RSpecs to help
+test the code</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>rails g scaffold book title author
+</span><span class='line'>rake db:migrate
+</span><span class='line'><span class="nv">RAILS_ENV</span><span class="o">=</span><span class="nb">test </span>rake db:migrate
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Running the Specs</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>rspec spec
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>You can also specify the file name and the line number for running individual
+specs</p>
+
+<h2>Including Cucumber in your Code</h2>
+
+<p><strong>Add the following in your Gemfile</strong>
+File: Gemfile</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">group</span> <span class="ss">:test</span><span class="p">,</span> <span class="ss">:development</span> <span class="k">do</span>
+</span><span class='line'>  <span class="n">gem</span> <span class="s1">&#39;cucumber-rails&#39;</span><span class="p">,</span> <span class="nb">require</span><span class="p">:</span> <span class="kp">false</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Installing Cucumber</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>rails g cucumber:install
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>For learners who are looking to setup the cucumber for the first time</strong></p>
+
+<p>Use <a href="https://github.com/cucumber/cucumber-rails-training-wheels">Traing Wheels</a></p>
+
+<p>File: Gemfile</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">gem</span> <span class="s2">&quot;cucumber-rails-training-wheels&quot;</span><span class="p">,</span> <span class="ss">:group</span> <span class="o">=&gt;</span> <span class="ss">:test</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Installing Cucumber</strong>
+rails generate cucumber_rails_training_wheels:install</p>
+
+<p><strong>Set up Cucumber Training Wheels before Scaffolding</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>rails generate cucumber_rails_training_wheels:feature post title:string body:text number:integer published:boolean
+</span><span class='line'>rails generate scaffold post title:string body:text number:integer published:boolean
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Testing the Features</strong></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>cucumber features
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>If you face Issues with Tableish in your features</strong></p>
+
+<p>Replace:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">tableish</span><span class="p">(</span><span class="s1">&#39;table tr&#39;</span><span class="p">,</span> <span class="s1">&#39;td,th&#39;</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>With:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="n">find</span><span class="p">(</span><span class="s1">&#39;table&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="s1">&#39;tr&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">map</span> <span class="p">{</span> <span class="o">|</span><span class="n">row</span><span class="o">|</span> <span class="n">row</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="s1">&#39;th, td&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">map</span> <span class="p">{</span> <span class="o">|</span><span class="n">cell</span><span class="o">|</span> <span class="n">cell</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">strip</span> <span class="p">}</span> <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Configuring Mac Vim for Programming]]></title>
+    <link href="http://Andrew-Ken.github.com/blog/2012/11/13/configuring-mac-vim-for-programming/"/>
+    <updated>2012-11-13T19:47:00-05:00</updated>
+    <id>http://Andrew-Ken.github.com/blog/2012/11/13/configuring-mac-vim-for-programming</id>
+    <content type="html"><![CDATA[<ol>
+<li>Download and install the latest mvim from</li>
+</ol>
+
+
+<p><a href="http://code.google.com/p/macvim/">Macvim Link</a></p>
+
+<ol>
+<li>Clone the latest dotvim configuration from the Web.</li>
+</ol>
+
+
+<p>Here&#8217;s one good source:</p>
+
+<p><a href="https://github.com/astrails/dotvim">Dotvim Link</a></p>
+
+<ol>
+<li><p>Follow the steps given in the dotvim config readme to Setup .vim and .vimrc files for enabling the best settings</p></li>
+<li><p>Make sure that the git source for dotvim is updated regularly.</p></li>
+</ol>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Git alias]]></title>
+    <link href="http://Andrew-Ken.github.com/blog/2012/11/13/git-alias/"/>
+    <updated>2012-11-13T09:32:00-05:00</updated>
+    <id>http://Andrew-Ken.github.com/blog/2012/11/13/git-alias</id>
+    <content type="html"><![CDATA[<p>Following are some of the common git aliases, people use. Add them to ~/.bash_profile</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>alias g='git'
+</span><span class='line'>alias gst='git status'
+</span><span class='line'>alias gs='git push'
+</span><span class='line'>alias gc='git commit'
+</span><span class='line'>alias gca='git commit -a'
+</span><span class='line'>alias ga='git add'
+</span><span class='line'>alias gco='git checkout'
+</span><span class='line'>alias gb='git branch'
+</span><span class='line'>alias gm='git merge'
+</span><span class='line'>alias gd="git diff"</span></code></pre></td></tr></table></div></figure>
+
+
+<p>An additional syntax highlighting can be provided as well with the following:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>export CLICOLOR=1
+</span><span class='line'>export LSCOLORS=gxfxaxdxcxegedabagacad</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Mountain Lion and Homebrew]]></title>
+    <link href="http://Andrew-Ken.github.com/blog/2012/11/12/mountain-lion-and-homebrew/"/>
+    <updated>2012-11-12T20:42:00-05:00</updated>
+    <id>http://Andrew-Ken.github.com/blog/2012/11/12/mountain-lion-and-homebrew</id>
+    <content type="html"><![CDATA[<p><a href="https://gist.github.com/1860902">SOURCE</a></p>
+
+<p>Get Mountain Lion and Homebrew to Be Happy:</p>
+
+<p>1) Install XCode 4.4 into /Applications</p>
+
+<p>Get it from the App Store.</p>
+
+<p>2) Install Command Line Tools</p>
+
+<p>In XCode&#8217;s Preferences > Downloads you can install command line tools.</p>
+
+<p>3) Let Everyone Know Where XCode Is</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='c'><span class='line'><span class="n">sudo</span> <span class="n">xcode</span><span class="o">-</span><span class="n">select</span> <span class="o">-</span><span class="k">switch</span> <span class="o">/</span><span class="n">Applications</span><span class="o">/</span><span class="n">Xcode</span><span class="p">.</span><span class="n">app</span><span class="o">/</span><span class="n">Contents</span><span class="o">/</span><span class="n">Developer</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>4) Install X11</p>
+
+<p>Visit http://xquartz.macosforge.org/trac/wiki and download and install 2.7.2+.</p>
+
+<p>You will need to fix the symlink it makes:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>ln -s /opt/X11 /usr/X11
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>5) Reinstall your brews</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>brew list
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Will tell you what you need to check. Try out everything one by one and when one doesn&#8217;t work brew remove it and then reinstall it. If the install doesn&#8217;t work, try brew install it &#8211;use-gcc to prevent llvm from getting in the way.
+You might need to install libxml2 and link it manually to make sure you don&#8217;t get the wrong xml2-config if your path:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>brew install libxml2
+</span><span class='line'>brew link libxml2
+</span><span class='line'>Run brew doctor and fix anything it tells you.
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>You may also need to symlink gcc for certain ruby gems and other stuff like that:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>sudo ln -s /usr/bin/gcc /usr/bin/gcc-4.2
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[GCC command line tools]]></title>
+    <link href="http://Andrew-Ken.github.com/blog/2012/11/12/gcc-command-line-tools/"/>
+    <updated>2012-11-12T20:29:00-05:00</updated>
+    <id>http://Andrew-Ken.github.com/blog/2012/11/12/gcc-command-line-tools</id>
+    <content type="html"><![CDATA[<p>When the bundling gems fail in Mac OS X, Download the latest GCC standalone file from the link below:</p>
+
+<p><a href="https://github.com/kennethreitz/osx-gcc-installer/downloads">gcc standalone tools</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Learning regular expressions]]></title>
+    <link href="http://Andrew-Ken.github.com/blog/2012/11/12/learning-regular-expressions/"/>
+    <updated>2012-11-12T15:54:00-05:00</updated>
+    <id>http://Andrew-Ken.github.com/blog/2012/11/12/learning-regular-expressions</id>
+    <content type="html"><![CDATA[<p>Learning Regular expressions require regular practice. Here are a few ways to practice:</p>
+
+<ol>
+<li>rails c</li>
+<li><a href="http://rubular.com/">Rubular</a></li>
+</ol>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[how to use observer and call back]]></title>
+    <link href="http://Andrew-Ken.github.com/blog/2012/11/12/how-to-use-observer-and-call-back/"/>
+    <updated>2012-11-12T15:07:00-05:00</updated>
+    <id>http://Andrew-Ken.github.com/blog/2012/11/12/how-to-use-observer-and-call-back</id>
+    <content type="html"><![CDATA[<ul>
+<li>Add configuration</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="c1">#config/application.rb</span>
+</span><span class='line'><span class="n">config</span><span class="o">.</span><span class="n">active_record</span><span class="o">.</span><span class="n">observers</span> <span class="o">=</span> <span class="ss">:order_observer</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>Create a Observer Class</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="k">class</span> <span class="nc">OrderObserver</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Observer</span>
+</span><span class='line'>  <span class="k">def</span> <span class="nf">after_update</span><span class="p">(</span><span class="n">order</span><span class="p">)</span>
+</span><span class='line'>    <span class="n">order</span><span class="o">.</span><span class="n">update_column</span><span class="p">(</span><span class="s1">&#39;type_state&#39;</span><span class="p">,</span> <span class="s2">&quot;UPDATED&quot;</span><span class="p">)</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>or we can use the way to register</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="c1">#config/application.rb</span>
+</span><span class='line'><span class="n">config</span><span class="o">.</span><span class="n">active_record</span><span class="o">.</span><span class="n">observers</span> <span class="o">=</span> <span class="ss">:notification_observer</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">class</span> <span class="nc">NotificationObserver</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Observer</span>
+</span><span class='line'>  <span class="n">observe</span> <span class="ss">:account</span><span class="p">,</span> <span class="ss">:balance</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="k">def</span> <span class="nf">after_update</span><span class="p">(</span><span class="n">order</span><span class="p">)</span>
+</span><span class='line'>    <span class="n">order</span><span class="o">.</span><span class="n">update_column</span><span class="p">(</span><span class="s1">&#39;type_state&#39;</span><span class="p">,</span> <span class="s2">&quot;UPDATED&quot;</span><span class="p">)</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[How to proxy a domain to localhost]]></title>
+    <link href="http://Andrew-Ken.github.com/blog/2012/11/09/how-to-proxy-a-domain-as-local/"/>
+    <updated>2012-11-09T14:29:00-05:00</updated>
+    <id>http://Andrew-Ken.github.com/blog/2012/11/09/how-to-proxy-a-domain-as-local</id>
+    <content type="html"><![CDATA[<ul>
+<li>STEP 1:</li>
+</ul>
+
+
+<p>Edit your hosts file by typing:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>sudo vim /etc/hosts
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Add the following line to the file:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>127.0.0.1 google.com <span class="o">(</span>or whatever other hostname you want proxied<span class="o">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>STEP 2:</li>
+</ul>
+
+
+<p>Type the following into the command line to (ip foward)set up the server port to 80 in this case it is 3000:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>sudo ipfw add 100 fwd 127.0.0.1,3000 tcp from any to any 80 in
+</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
+  
+</feed>
