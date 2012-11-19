@@ -3,7 +3,7 @@ layout: post
 title: "How to proxy a domain to localhost"
 date: 2012-11-09 14:29
 comments: true
-categories: [bash, ipfw]
+categories: [mac, bash, ipfw]
 ---
 * STEP 1:
 
