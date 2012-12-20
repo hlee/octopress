@@ -57,3 +57,6 @@ rvm use 1.8.7-p302 --default
 ```sh
 rvm --help
 ```
+
+
+Any questions on this, please feel free to ask. We're here to help...

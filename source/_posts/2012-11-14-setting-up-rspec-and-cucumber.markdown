@@ -109,3 +109,4 @@ find('table').all('tr').map { |row| row.all('th, td').map { |cell| cell.text.str
 ```
 
 
+Any questions on this, please feel free to ask. We're here to help...

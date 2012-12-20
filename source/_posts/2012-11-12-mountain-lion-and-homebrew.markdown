@@ -3,7 +3,7 @@ layout: post
 title: "Mountain Lion and Homebrew"
 date: 2012-11-12 20:42
 comments: true
-categories: [ gcc , homebrew , ruby gems]
+categories: [mac, gcc , homebrew , ruby gems]
 author: https://gist.github.com/1860902
 ---
 [SOURCE](https://gist.github.com/1860902)
@@ -55,3 +55,4 @@ You may also need to symlink gcc for certain ruby gems and other stuff like that
 sudo ln -s /usr/bin/gcc /usr/bin/gcc-4.2
 ```
 
+Any questions on this, please feel free to ask. We're here to help...

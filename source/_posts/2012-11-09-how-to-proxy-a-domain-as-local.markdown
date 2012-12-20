@@ -3,7 +3,7 @@ layout: post
 title: "How to proxy a domain to localhost"
 date: 2012-11-09 14:29
 comments: true
-categories: [bash, ipfw]
+categories: [mac, bash, ipfw]
 ---
 * STEP 1:
 
@@ -26,3 +26,5 @@ Type the following into the command line to (ip foward)set up the server port to
 ```bash
 sudo ipfw add 100 fwd 127.0.0.1,3000 tcp from any to any 80 in
 ```
+
+Any questions on this, please feel free to ask. We're here to help...

@@ -20,3 +20,5 @@ Here's one good source:
 
 4. Make sure that the git source for dotvim is updated regularly.
 
+
+Any questions on this, please feel free to ask. We're here to help...

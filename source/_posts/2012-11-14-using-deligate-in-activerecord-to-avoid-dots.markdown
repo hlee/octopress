@@ -45,3 +45,5 @@ User.first.find_by_category('ruby')
 ```
 
 There is an option to allow prefix as well
+
+Any questions on this, please feel free to ask. We're here to help...

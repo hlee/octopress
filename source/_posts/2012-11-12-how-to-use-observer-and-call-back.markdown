@@ -36,3 +36,5 @@ or we can use the way to register
       end
     end 
 ```
+
+Any questions on this, please feel free to ask. We're here to help...

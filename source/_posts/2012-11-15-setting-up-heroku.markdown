@@ -63,3 +63,5 @@ Further reading:
 ----------------------
 
 [devcenter link](https://devcenter.heroku.com)
+
+Any questions on this, please feel free to ask. We're here to help...
